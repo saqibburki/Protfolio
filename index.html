@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saqib khan - Creative Developer</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-gray-950 text-gray-100">
+    <!-- Navbar -->
+    <nav
+      class="fixed top-0 left-0 right-0 flex items-center justify-between p-4 pl-16 pr-16 z-5 transition-all duration-300 hover:bg-gray-950/80"
+      id="mainNav"
+    >
+      <div class="nav-logo flex items-center w-56 cursor-pointer relative">
+        <button
+          class="hamburger invert-[65%] md:hidden absolute left-0 z-10"
+          onclick="toggleMenu()"
+        >
+          <img src="hambargur.svg" alt="menu" class="w-6 h-6" />
+        </button>
+        <img
+          alt="Logo"
+          class="w-40 filter invert cursor-pointer ml-16 hidden md:block"
+          src="LOGO-NEW.png"
+        />
+      </div>
+      <nav class="nav-container md:block">
+        <ul
+          class="relative z-50 flex flex-col md:flex-row space-x-0 md:space-x-6 text-gray-400 font-bold bg-gray-800/60 px-8 py-3 rounded-3xl gap-2 backdrop-blur-lg mobile-menu-hidden md:flex items-center justify-center text-center fixed md:relative top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:transform-none md:top-0 md:left-0 w-[80%] md:w-auto"
+        >
+          <li class="nav-item" data-section="home">Home</li>
+          <li class="nav-item" data-section="skills">Skills</li>
+          <li class="nav-item" data-section="pricing">My pricing</li>
+          <li class="nav-item" data-section="about">About us</li>
+        </ul>
+      </nav>
+      <div class="nav-buttons flex space-x-4 text-gray-400">
+        <button
+          class="invert mr-2 hover:rotate-[120deg] transition-all duration-500 object-cover"
+          id="toggle"
+          onclick="toggleBackground()"
+        >
+          <img src="brightness (1).png" alt="toggle theme" class="w-6 h-6" />
+        </button>
+        <button
+          onclick="openHirePopup()"
+          class="hire-me-btn pt-2 pb-2 pl-4 pr-5 flex items-center gap-2 cursor-pointer bg-[#FF5D38] text-white rounded-full relative overflow-hidden group"
+        >
+          <span class="relative z-10 whitespace-nowrap">Hire me</span>
+          <img
+            class="w-6 relative z-10 group-hover:rotate-12 transition-transform duration-300 min-w-[16px]"
+            src="check-solid (1).svg"
+            alt=""
+          />
+          <div
+            class="absolute inset-0 bg-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500"
+          ></div>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Main/Home section -->
+    <main class="min-h-screen pt-16" id="home">
+      <div class="container mx-auto flex items-center mt-16 gap-20">
+        <!-- Left Content -->
+        <div class="w-1/2 pr-4 mt-16 animate-fadeIn">
+          <p class="text-2xl mb-4 animate-slideDown">Hi, i'm</p>
+          <h1
+            style="color: #ff5d38"
+            class="text-[#FF5D38] text-5xl font-bold mb-2 animate-slideRight"
+          >
+            Saqib Khan
+          </h1>
+          <h2 class="text-7xl font-bold leading-tight mb-6 animate-slideLeft">
+            Creative<br />
+            Web developer.
+          </h2>
+          <p class="text-white mb-8 text-lg animate-fadeIn animation-delay-500">
+            Since creative Developer often interact with creative teams,
+            managers and clients, they need strong communication skills.
+          </p>
+
+          <!-- Social Links -->
+          <div class="flex gap-6 animate-fadeIn animation-delay-700">
+            <a
+              style="color: #ff5d38"
+              href="https://www.instagram.com/saqib_burki786/"
+              class="flex items-center gap-2 hover:text-[#FF5D38] transition-colors"
+            >
+              <i class="fab fa-instagram"></i>
+              Instagram
+            </a>
+            <a
+              style="color: #ff5d38"
+              href="https://www.facebook.com/profile.php?id=100085068700829"
+              class="flex items-center gap-2 hover:text-[#FF5D38] transition-colors"
+            >
+              <i class="fa-brands fa-facebook"></i>
+              Facebook
+            </a>
+            <a
+              style="color: #ff5d38"
+              href="https://www.Gmail.com/saqibburki78@gmail.com"
+              class="flex items-center gap-2 hover:text-[#FF5D38] transition-colors"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+              whatsapp
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Image -->
+        <div class="w-1/2 relative animate-float">
+          <div
+            class="absolute inset-0 bg-[#FF5D38] rounded-full animate-pulse"
+          ></div>
+          <img
+            src="crop2-removebg.png"
+            alt="Creative Designer"
+            class="relative w-full h-full object-cover mb-6 animate-fadeIn"
+          />
+        </div>
+      </div>
+    </main>
+
+    <!-- Skills section -->
+    <section class="py-24" id="skills">
+      <div class="container mx-auto px-16">
+        <!-- Skills Header -->
+        <div class="text-center mb-16">
+          <div class="inline-block border-2 border-[#FF5D38] px-8 py-2">
+            <h2
+              style="color: #ff5d38"
+              class="text-[#FF5D38] text-2xl font-bold tracking-wider"
+            >
+              SKILLS
+            </h2>
+          </div>
+        </div>
+
+        <!-- Using Now Section -->
+        <div class="mb-20">
+          <h3 class="text-center text-lg font-medium mb-12">Expertise:</h3>
+          <div
+            class="grid grid-cols-[repeat(auto-fill,minmax(100px,1fr))] gap-16 max-w-4xl mx-auto"
+          >
+            <!-- HTML5 -->
+            <div class="flex flex-col items-center">
+              <img
+                class="w-16 h-16 mb-3 object-cover rounded-lg"
+                src="png-clipart-web-development-html-responsive-web-design-logo-javascript-html-angle-web-design.png"
+              />
+              <span class="text-sm">HTML5</span>
+            </div>
+
+            <!-- CSS3 -->
+            <div class="flex flex-col items-center">
+              <img
+                src="png-clipart-css3-cascading-style-sheets-logo-html-world-wide-web-blue-angle.png"
+                alt="CSS3"
+                class="w-16 h-16 mb-3 object-cover rounded-lg"
+              />
+              <span class="text-sm">CSS3</span>
+            </div>
+
+            <!-- SASS -->
+            <div class="flex flex-col items-center">
+              <img
+                src="png-transparent-figma-app-logo-tech-companies-thumbnail.png"
+                alt="SASS"
+                class="w-16 h-16 mb-3 object-cover rounded-lg"
+              />
+              <span class="text-sm">Figma</span>
+            </div>
+
+            <!-- JavaScript -->
+            <div class="flex flex-col items-center">
+              <img
+                src="png-clipart-javascript-logo-html-javascript-logo-angle-text.png"
+                alt="JAVASCRIPT"
+                class="w-16 h-16 mb-3 object-cover rounded-lg"
+              />
+              <span class="text-sm">JAVASCRIPT</span>
+            </div>
+
+            <!-- React -->
+            <div class="flex flex-col items-center">
+              <img
+                src="png-clipart-react-javascript-angularjs-ionic-github-text-logo.png"
+                alt="REACT"
+                class="w-16 h-16 mb-3 object-cover rounded-lg"
+              />
+              <span class="text-sm">REACT</span>
+            </div>
+
+            <!-- Bootstrap -->
+            <div class="flex flex-col items-center">
+              <img
+                src="png-clipart-responsive-web-design-web-development-bootstrap-cascading-style-sheets-web-browser-world-wide-web-purple-web-design.png"
+                alt="BOOTSTRAP"
+                class="w-16 h-16 mb-3 object-cover rounded-lg"
+              />
+              <span class="text-sm">BOOTSTRAP</span>
+            </div>
+
+            <!-- Git -->
+            <div class="flex flex-col items-center">
+              <img
+                src="png-clipart-github-repository-git-project-commit-github-angle-logo.png"
+                alt="GIT"
+                class="w-16 h-16 mb-3 object-cover rounded-lg"
+              />
+              <span class="text-sm">GIT</span>
+            </div>
+
+            <!-- Figma -->
+            <div class="flex flex-col items-center">
+              <img
+                src="png-clipart-github-computer-icons-github-logo-monochrome.png"
+                alt="FIGMA"
+                class="w-16 h-16 mb-3 object-cover rounded-lg"
+              />
+              <span class="text-sm">GitHub</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Learning Section -->
+        <div>
+          <h3 class="text-center text-lg font-medium mb-12">LEARNING:</h3>
+          <div
+            class="grid grid-cols-[repeat(auto-fill,minmax(100px,1fr))] gap-16 max-w-4xl mx-auto"
+          >
+            <!-- NodeJS -->
+            <div class="flex flex-col items-center">
+              <img
+                src="png-transparent-node-js-javascript-express-js-mongodb-github-github-angle-text-logo-thumbnail.png"
+                alt="NODEJS"
+                class="w-16 h-16 mb-3 object-cover rounded-lg"
+              />
+              <span class="text-sm">NODEJS</span>
+            </div>
+
+            <!-- next js -->
+            <div class="flex flex-col items-center">
+              <img
+                src="png-transparent-next-js-hd-logo-thumbnail.png"
+                alt="MySQL"
+                class="w-16 h-16 mb-3 object-cover rounded-lg"
+              />
+              <span class="text-sm">Next js</span>
+            </div>
+
+            <!-- MongoDB -->
+            <div class="flex flex-col items-center">
+              <img
+                src="png-transparent-mongodb-original-wordmark-logo-icon-thumbnail.png"
+                alt="MONGODB"
+                class="w-16 h-16 mb-3 object-cover rounded-lg"
+              />
+              <span class="text-sm">MONGODB</span>
+            </div>
+
+            <!-- Express -->
+            <div class="flex flex-col items-center">
+              <img
+                src="png-transparent-express-js-node-js-javascript-mongodb-node-js-text-trademark-logo-thumbnail.png"
+                alt="TYPESCRIPT"
+                class="w-16 h-16 mb-3 object-cover rounded-lg"
+              />
+              <span class="text-sm">Express js</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing section -->
+    <section class="flex min-h-screen" id="pricing">
+      <!-- Fixed Left Image -->
+      <div class="">
+        <div class="rounded-full overflow-hidden bg-orange-500 w-[90%]">
+          <img
+            class="-translate-y-[-4.89rem]"
+            src="Remove background project.png"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <!-- Right Side Content -->
+      <div class="w-1/2 ml-auto min-h-screen p-16">
+        <!-- Profile Info -->
+        <div class="mb-20">
+          <h1 class="text-6xl font-bold mb-4">Saqib khan</h1>
+          <div style="color: #ff5d38" class="flex gap-4 mb-8">
+            <span style="color: #ff5d38">17 years</span>
+            <span>/</span>
+            <span style="color: #ff5d38">Pakistan</span>
+            <span>/</span>
+            <span style="color: #ff5d38">Freelance</span>
+          </div>
+          <p class="text-gray-600 leading-relaxed">
+            Credibly e-enable standards compliant users rather than front-end
+            solutions. Enthusiastically harness client-focused action items
+            before corporate intellectual capital. Uniquely repurpose
+            world-class infrastructures through client-centered collaboration
+            and idea-sharing. Progressively mesh magnetic quality vectors before
+            dynamic markets. Competently leverage existing leading-edge
+            collaboration and idea-sharing with 2.0 total linkage.
+          </p>
+        </div>
+
+        <!-- Services Section -->
+        <div class="mb-20">
+          <h2 class="text-4xl font-bold mb-12">My Services</h2>
+          <div class="grid grid-cols-2 gap-8">
+            <!-- Development -->
+            <div class="space-y-4">
+              <div class="text-blue-500">
+                <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M10 20L14 4M18 8L22 12L18 16M6 16L2 12L6 8" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold">Development</h3>
+              <p class="text-gray-600">
+                Create a platform with the best and coolest quality from us.
+              </p>
+            </div>
+
+            <!-- SEO Optimization -->
+            <div class="space-y-4">
+              <div class="text-pink-500">
+                <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2L2 7L12 12L22 7L12 2Z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold">SEO Optimization</h3>
+              <p class="text-gray-600">
+                Create a platform with the best and coolest quality from us.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pricing Section -->
+        <div>
+          <h2 class="text-4xl font-bold mb-12">My Pricing</h2>
+          <div class="grid grid-cols-3 gap-8">
+            <!-- Basic Plan -->
+            <div class="space-y-4">
+              <h3 class="text-2xl font-bold">Basic</h3>
+              <div class="flex items-baseline">
+                <span
+                  style="color: #ff5d38"
+                  class="text-[#FF5D38] text-5xl font-bold"
+                  >$5</span
+                >
+                <span class="text-gray-600 ml-2">/ Hour</span>
+              </div>
+              <ul class="space-y-2">
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="w-5 h-5 text-green-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  Consulting
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="w-5 h-5 text-green-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  Development
+                </li>
+                <li class="flex items-center gap-2 text-gray-400">
+                  <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                  Design
+                </li>
+              </ul>
+            </div>
+
+            <!-- Advanced Plan -->
+            <div class="space-y-4">
+              <h3 class="text-2xl font-bold">Advanced</h3>
+              <div class="flex items-baseline">
+                <span
+                  style="color: #ff5d38"
+                  class="text-[#FF5D38] text-5xl font-bold"
+                  >$10</span
+                >
+                <span class="text-gray-600 ml-2">/ Hour</span>
+              </div>
+              <ul class="space-y-2">
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="w-5 h-5 text-green-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  Consulting
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="w-5 h-5 text-green-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  Development
+                </li>
+                <li class="flex items-center gap-2">
+                  <svg
+                    class="w-5 h-5 text-green-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                  Design
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About section -->
+    <section class="py-24 px-16" id="about">
+      <div class="container mx-auto flex gap-16">
+        <!-- Left Side Content -->
+        <div class="w-1/2">
+          <h2
+            style="color: #ff5d38"
+            class="text-3xl font-bold leading-tight mb-8"
+          >
+            Got A Project Or<br />
+            A Partnership In Mind?
+          </h2>
+
+          <p class="text-gray-600 mb-12 leading-relaxed">
+            Holisticly leverage other's user friendly platforms with progressive
+            products. Proactively matrix exceptional content through B2C
+            schemas. Seamlessly exploit cutting-edge niche markets rather than
+            premium results. Collaboratively restore pandemic e-business and
+            plug-and-play data. Conveniently target exceptional platforms
+            whereas standards compliant data.
+          </p>
+
+          <!-- Contact Information -->
+          <div class="space-y-8">
+            <div>
+              <h3 class="font-bold text-xl mb-4">Phone:</h3>
+              <div class="space-y-2 text-gray-600">
+                <p>+92 3419494572</p>
+                <p>+92 3078128669</p>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-xl mb-4">Email:</h3>
+              <div class="space-y-2 text-gray-600">
+                <p>saqibburki78@gmail.com</p>
+                <p>saqibburki45@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side Form -->
+        <div class="w-1/2">
+          <form
+            action="https://formsubmit.co/saqibburki78@gmail.com"
+            method="POST"
+            class="space-y-6"
+          >
+            <!-- Honeypot to prevent spam -->
+            <input type="text" name="_honey" style="display: none" />
+
+            <!-- Disable Captcha -->
+            <input type="hidden" name="_captcha" value="false" />
+
+            <!-- Name and Email Row -->
+            <div class="flex gap-6">
+              <input
+                type="text"
+                name="name"
+                placeholder="Name"
+                required
+                class="w-1/2 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-[#FF5D38] bg-transparent"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+                class="w-1/2 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-[#FF5D38] bg-transparent"
+              />
+            </div>
+
+            <!-- Title Input -->
+            <input
+              type="text"
+              name="subject"
+              placeholder="Title"
+              required
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-[#FF5D38] bg-transparent"
+            />
+
+            <!-- Message Textarea -->
+            <textarea
+              name="message"
+              placeholder="Leave message for us Here ..."
+              rows="6"
+              required
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-[#FF5D38] bg-transparent resize-none"
+            ></textarea>
+
+            <!-- Submit Button -->
+            <button
+              type="submit"
+              class="px-8 py-3 bg-[#FF5D38] text-white rounded-lg hover:bg-[#ff4a20] transition-colors duration-300"
+            >
+              Send
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <script src="script.js "></script>
+    <!-- Add this before closing body tag -->
+    <div
+      id="hirePopup"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50"
+    >
+      <div class="bg-gray-950 p-8 rounded-2xl w-full max-w-lg mx-4 relative">
+        <!-- Close Button -->
+        <button
+          onclick="closeHirePopup()"
+          class="absolute top-4 right-4 text-gray-400 hover:text-white"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+        </button>
+
+        <!-- Popup Header -->
+        <h2 class="text-2xl font-bold mb-6 text-gray-100">
+          Let's Work Together
+        </h2>
+
+        <!-- Hire Form -->
+        <form
+          action="https://formsubmit.co/saqibburki78@gmail.com"
+          method="POST"
+          class="space-y-6"
+        >
+          <!-- Honeypot to prevent spam -->
+          <input type="text" name="_honey" style="display: none" />
+
+          <!-- Disable Captcha -->
+          <input type="hidden" name="_captcha" value="false" />
+
+          <!-- Name and Email Row -->
+          <div class="flex gap-6">
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              required
+              class="w-1/2 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-[#FF5D38] bg-transparent"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              required
+              class="w-1/2 px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-[#FF5D38] bg-transparent"
+            />
+          </div>
+
+          <!-- Title Input -->
+          <input
+            type="text"
+            name="subject"
+            placeholder="Project Title"
+            required
+            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-[#FF5D38] bg-transparent"
+          />
+
+          <!-- Message Textarea -->
+          <textarea
+            name="message"
+            placeholder="Tell me about your project..."
+            rows="6"
+            required
+            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-[#FF5D38] bg-transparent resize-none"
+          ></textarea>
+
+          <!-- Submit Button -->
+          <button
+            type="submit"
+            class="w-full px-8 py-3 bg-[#FF5D38] text-white rounded-lg hover:bg-[#ff4a20] transition-colors duration-300"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
