@@ -22,8 +22,9 @@
     >
       <div class="nav-logo flex items-center w-56 cursor-pointer relative">
         <button
-          class="hamburger invert-[65%] md:hidden absolute left-0 z-10"
+          class="hamburger invert-[65%] md:hidden absolute left-4 z-10"
           onclick="toggleMenu()"
+          aria-label="Toggle menu"
         >
           <img src="hambargur.svg" alt="menu" class="w-6 h-6" />
         </button>
@@ -33,14 +34,20 @@
           src="LOGO-NEW.png"
         />
       </div>
-      <nav class="nav-container md:block">
+      <nav class="nav-container md:block w-full md:w-auto">
         <ul
-          class="relative z-50 flex flex-col md:flex-row space-x-0 md:space-x-6 text-gray-400 font-bold bg-gray-800/60 px-8 py-3 rounded-3xl gap-2 backdrop-blur-lg mobile-menu-hidden md:flex items-center justify-center text-center fixed md:relative top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:transform-none md:top-0 md:left-0 w-[80%] md:w-auto"
+          class="relative z-50 flex flex-col md:flex-row space-x-0 md:space-x-6 text-gray-400 font-bold bg-gray-800/60 px-8 py-3 rounded-3xl gap-2 backdrop-blur-lg mobile-menu-hidden md:flex items-center justify-center text-center fixed md:relative top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:transform-none md:top-0 md:left-0 w-[90%] sm:w-[80%] md:w-auto mx-auto"
         >
-          <li class="nav-item" data-section="home">Home</li>
-          <li class="nav-item" data-section="skills">Skills</li>
-          <li class="nav-item" data-section="pricing">My pricing</li>
-          <li class="nav-item" data-section="about">About us</li>
+          <li class="nav-item w-full md:w-auto" data-section="home">Home</li>
+          <li class="nav-item w-full md:w-auto" data-section="skills">
+            Skills
+          </li>
+          <li class="nav-item w-full md:w-auto" data-section="pricing">
+            My pricing
+          </li>
+          <li class="nav-item w-full md:w-auto" data-section="about">
+            About us
+          </li>
         </ul>
       </nav>
       <div class="nav-buttons flex space-x-4 text-gray-400">
@@ -70,14 +77,15 @@
 
     <!-- Main/Home section -->
     <main class="min-h-screen pt-16" id="home">
-      <div class="container mx-auto flex items-center mt-16 gap-20">
+      <div
+        class="container mx-auto flex flex-col md:flex-row items-center mt-16 gap-20 px-4 md:px-16"
+      >
         <!-- Left Content -->
-        <div class="w-1/2 pr-4 mt-16 animate-fadeIn">
+        <div
+          class="w-full md:w-1/2 pr-0 md:pr-4 mt-16 animate-fadeIn text-center md:text-left"
+        >
           <p class="text-2xl mb-4 animate-slideDown">Hi, i'm</p>
-          <h1
-            style="color: #ff5d38"
-            class="text-[#FF5D38] text-5xl font-bold mb-2 animate-slideRight"
-          >
+          <h1 class="text-[#FF5D38] text-5xl font-bold mb-2 animate-slideRight">
             Saqib Khan
           </h1>
           <h2 class="text-7xl font-bold leading-tight mb-6 animate-slideLeft">
@@ -90,27 +98,26 @@
           </p>
 
           <!-- Social Links -->
-          <div class="flex gap-6 animate-fadeIn animation-delay-700">
+          <div
+            class="flex gap-6 mb-12 md:mb-0 animate-fadeIn animation-delay-700 justify-center md:justify-start"
+          >
             <a
-              style="color: #ff5d38"
               href="https://www.instagram.com/saqib_burki786/"
-              class="flex items-center gap-2 hover:text-[#FF5D38] transition-colors"
+              class="flex items-center gap-2 text-[#FF5D38] hover:text-[#FF5D38] transition-colors"
             >
               <i class="fab fa-instagram"></i>
               Instagram
             </a>
             <a
-              style="color: #ff5d38"
               href="https://www.facebook.com/profile.php?id=100085068700829"
-              class="flex items-center gap-2 hover:text-[#FF5D38] transition-colors"
+              class="flex items-center gap-2 text-[#FF5D38] hover:text-[#FF5D38] transition-colors"
             >
               <i class="fa-brands fa-facebook"></i>
               Facebook
             </a>
             <a
-              style="color: #ff5d38"
               href="https://www.Gmail.com/saqibburki78@gmail.com"
-              class="flex items-center gap-2 hover:text-[#FF5D38] transition-colors"
+              class="flex items-center gap-2 text-[#FF5D38] hover:text-[#FF5D38] transition-colors"
             >
               <i class="fa-brands fa-whatsapp"></i>
               whatsapp
@@ -119,7 +126,7 @@
         </div>
 
         <!-- Right Image -->
-        <div class="w-1/2 relative animate-float">
+        <div class="w-full md:w-1/2 relative animate-float px-4 md:px-0">
           <div
             class="absolute inset-0 bg-[#FF5D38] rounded-full animate-pulse"
           ></div>
@@ -588,7 +595,6 @@
         </div>
       </div>
     </section>
-    <script src="script.js "></script>
     <!-- Add this before closing body tag -->
     <div
       id="hirePopup"
@@ -678,5 +684,8 @@
         </form>
       </div>
     </div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-trail"></div>
+    <script src="script.js "></script>
   </body>
 </html>
